@@ -1,0 +1,5 @@
+openai-whisper @ git+https://github.com/openai/whisper.git@c09a7ae299c4c34c5839a76380ae407e7d785914
+transformers==4.28.1
+facenet_pytorch
+deepface
+gtts
