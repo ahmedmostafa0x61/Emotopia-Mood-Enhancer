@@ -3,7 +3,7 @@ from cv_modules.emotion_recognition import find_emotion
 from surveying_part import survey, generate_questions
 from recommendation.emotopia import recommend_song
 from cv_modules.face_reco import face_reco
-
+from utils.io_devices import run_audio
 
 def main():
     # Open Camera and Find Faces
@@ -17,6 +17,7 @@ def main():
     user_quest = survey(facial_emo, name)
     # Ask the user some questions to get his final emotion
     user_final_emo = generate_questions(user_quest, number=3)
+    run_audio(f'Here is a {user_final_emo} playlist for you based on your current mood.')
     recommend_song(user_final_emo)
 
 
